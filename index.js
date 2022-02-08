@@ -13,7 +13,7 @@ class SortedList {
   }
 
   get(pos) {
-    if (this.items.indexOf(pos) === -1) {
+    if (this.items.length > pos) {
       throw new Error('OutOfBounds');
     } else {
     return  this.items[pos];
@@ -28,7 +28,7 @@ class SortedList {
       return Math.max(...this.items)
     }
   }
-
+ 
   min() {
     this.itmes = this.items.sort();
     if (this.length === 0) {
